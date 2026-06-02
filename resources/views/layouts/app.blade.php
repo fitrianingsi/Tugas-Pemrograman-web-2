@@ -48,12 +48,6 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            Kelola Film
-                        </a>
-                    </li>
-
                 </ul>
 
             </div>

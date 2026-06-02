@@ -44,7 +44,6 @@ class MovieController extends Controller
         }
 
         Movie::create($validated);
-
         return redirect('/movie');
     }
 
@@ -69,7 +68,12 @@ class MovieController extends Controller
         ]);
 
         $movie->update($validated);
+        return redirect('/movie');
+    }
 
+    public function destroy(Movie $movie)
+    {
+        $movie->delete();
         return redirect('/movie');
     }
 }

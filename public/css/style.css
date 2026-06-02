@@ -1,43 +1,114 @@
 body{
-    background:#f8f9fa;
-    font-family: Arial, Helvetica, sans-serif;
+    background:#f8fafc;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.hero-section{
-    min-height:550px;
-    background:linear-gradient(135deg,#111827,#1f2937);
-    display:flex;
-    align-items:center;
+.navbar{
+    box-shadow:0 2px 12px rgba(0,0,0,.12);
 }
 
-.banner-box{
-    height:350px;
-    background:rgba(255,255,255,0.1);
-    border:2px dashed rgba(255,255,255,0.4);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.navbar-brand{
+    letter-spacing:1px;
 }
 
-.section-title{
-    border-left:6px solid #ffc107;
-    padding-left:12px;
+.btn-warning{
     font-weight:bold;
 }
 
-.empty-card{
+/* HERO / COMING SOON */
+.hero-section{
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+}
+
+.hero-overlay{
+    min-height:100vh;
+    background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.55),rgba(0,0,0,.15));
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-title{
+    font-size:64px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.hero-description{
+    font-size:18px;
+    color:#e5e7eb;
+}
+
+/* SECTION */
+.section-title{
+    border-left:6px solid #ffc107;
+    padding-left:15px;
+    font-weight:800;
+}
+
+/* MOVIE CARD */
+.movie-card{
+    height:100%;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+    background:white;
+}
+
+.movie-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.movie-poster{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+.movie-card .card-body{
+    min-height:130px;
+}
+
+.poster-empty-small{
+    width:100%;
+    height:420px;
+    background:#e5e7eb;
+    color:#6b7280;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+/* TABLE */
+.table{
+    background:white;
+}
+
+.table th{
+    white-space:nowrap;
+}
+
+/* FORM */
+.form-control,
+.form-select{
+    border-radius:10px;
+}
+
+.card{
     border-radius:18px;
 }
 
-.menu-card{
-    transition:0.3s;
-}
-
-.menu-card:hover{
-    transform:translateY(-8px);
-}
-
+/* FOOTER */
 footer{
     margin-top:80px;
 }
