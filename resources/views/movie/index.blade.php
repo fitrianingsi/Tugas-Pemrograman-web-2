@@ -5,6 +5,10 @@
             Movie Data
         </h1>
 
+        <a href="/movie/create" class="btn btn-warning mb-3">
+            Tambah Film
+        </a>
+
         <table class="table table-bordered">
             <thead class="table-dark">
                 <tr>

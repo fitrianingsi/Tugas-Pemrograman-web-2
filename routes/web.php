@@ -8,3 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/movie', [MovieController::class, 'index']);
+Route::get('/movie/create', [MovieController::class, 'create']);
+Route::post('/movie', [MovieController::class, 'store']);
