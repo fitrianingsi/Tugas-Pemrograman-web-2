@@ -47,4 +47,29 @@ class MovieController extends Controller
 
         return redirect('/movie');
     }
+
+    public function edit(Movie $movie)
+    {
+        return view('movie.edit', [
+            'title' => 'Edit Movie',
+            'movie' => $movie
+        ]);
+    }
+
+    public function update(Request $request, Movie $movie)
+    {
+        $validated = $request->validate([
+            'title' => 'required',
+            'genre' => 'required',
+            'director' => 'required',
+            'release_year' => 'required',
+            'rating' => 'required',
+            'synopsis' => 'required',
+            'status' => 'required'
+        ]);
+
+        $movie->update($validated);
+
+        return redirect('/movie');
+    }
 }
