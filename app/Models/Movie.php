@@ -11,7 +11,7 @@ class Movie extends Model
     use HasFactory;
     protected $fillable = [
         'title',
-        'genre',
+        'genre_id',
         'director',
         'release_year',
         'rating',
@@ -19,4 +19,9 @@ class Movie extends Model
         'synopsis',
         'status'
     ];
+
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class);
+    }
 }

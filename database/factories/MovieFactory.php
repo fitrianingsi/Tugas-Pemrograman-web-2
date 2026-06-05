@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Genre;
 use App\Models\Movie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -19,13 +20,8 @@ class MovieFactory extends Factory
     {
         return [
             'title' => fake()->sentence(2),
-            'genre' => fake()->randomElement([
-                'Action',
-                'Drama',
-                'Comedy',
-                'Horror'
-            ]),
             'director' => fake()->name(),
+            'genre_id' => Genre::inRandomOrder()->first()->id,
             'release_year' => fake()->year(),
             'rating' => fake()->randomFloat(1, 1, 10),
             'poster' => null,
@@ -34,7 +30,6 @@ class MovieFactory extends Factory
                 'sedang_tayang',
                 'akan_tayang'
             ])
-
         ];
     }
 }
